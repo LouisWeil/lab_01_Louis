@@ -1,7 +1,11 @@
-visitors <- read_csv("data/UK-visitor-numbers.csv")
+library(tidyverse)
 
-visitors_10 <- (visitors %>% head(n = 10))
+visitors <- read.csv("data/UK-visitor-numbers.csv")
+
+visitors |> head(n = 10)
 
 View(visitors)
 
 arrange(visitors, desc(n_2022))
+
+select(visitors, startsWith("National"))
